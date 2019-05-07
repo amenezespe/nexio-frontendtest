@@ -1,3 +1,44 @@
-<p>
-  detail works!
-</p>
+<section class="content-header">
+</section>
+
+<section class="content">
+  <section class="invoice">
+      
+        <form #form="ngForm" novalidate>
+          <div class="row">
+            <div class="col-xs-12">
+              <h2 class="page-header">
+                <i class="fa fa-shopping-cart"></i> Comentaires
+              </h2>
+            </div>
+          </div>                
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p>Id de Groupe</p>
+              <input [(ngModel)]="comment.idComment" required id="idgroup" name="idgroup">
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <p>Commentaire</p>
+              <input [(ngModel)]="comment.description" required id="description"name="description">
+            </div>
+
+          </div>
+      
+        </form>
+        <div class="row">
+          <p></p>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success pull-left" [disabled]="!form.valid" (click)="saveComment()"><i class="fa fa-credit-card"></i> Soumettre
+            </button>
+          </div>
+        </div>
+
+    </section>
+</section>
